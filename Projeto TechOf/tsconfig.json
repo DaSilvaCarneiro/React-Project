@@ -29,7 +29,9 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "checkJs": true  // Enable type checking for JavaScript files
   },
   "include": [
     "src",
