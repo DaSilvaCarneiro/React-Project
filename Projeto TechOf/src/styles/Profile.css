@@ -1,0 +1,70 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    background: none;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.profile-info div {
+    margin-bottom: 12px;
+}
+
+.profile-info span {
+    font-weight: bold;
+    color: black;
+}
+
+/* Styles for update button */
+.update-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.update-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.update-button:active {
+    transform: translateY(0);
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.update-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
