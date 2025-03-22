@@ -1,26 +1,51 @@
 {
   "compilerOptions": {
+    // Basic Configuration
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "target": "ES2020", // Target ECMAScript version
+    "useDefineForClassFields": true, // Use `define` for class fields
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ], // Library files to include
+    "module": "ESNext", // Module code generation
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "moduleResolution": "bundler", // Module resolution strategy
+    "allowImportingTsExtensions": true, // Allow importing `.ts` files
+    "isolatedModules": true, // Ensure files can be transpiled independently
+    "moduleDetection": "force", // Force module detection
+    "noEmit": true, // Do not emit JavaScript files
+    "jsx": "react-jsx", // JSX factory
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ], // Type definition locations
+    // Strict Type-Checking Options
+    "strict": true, // Enable all strict type-checking options
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+    "noUncheckedSideEffectImports": true, // Report errors on unchecked side-effect imports
+    // Paths (Optional: If using path aliases)
+    "baseUrl": ".", // Base directory for path resolution
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ] // Example path alias for `src` folder
+    }
   },
-  "include": ["src"]
+  // Include these files for compilation
+  "include": [
+    "src"
+  ],
+  // Exclude these files from compilation
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "socks" // Exclude the `socks` library if it causes issues
+  ]
 }
