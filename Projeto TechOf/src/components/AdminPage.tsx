@@ -127,6 +127,7 @@ const AdminPage: React.FC = () => {
                         if (userData?.isAdmin) {
                             setIsAdmin(true);
                             fetchData();
+                            console.log("isAdmin", isAdmin)
                         } else {
                             navigate("/");
                         }
